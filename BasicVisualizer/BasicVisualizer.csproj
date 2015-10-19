@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B29BF0B8-1057-4DFB-B71A-42ABC9ED97D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BasicVisualizer</RootNamespace>
+    <AssemblyName>BasicVisualizer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicVizualizer.cs" />
+    <Compile Include="BoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardForm.Designer.cs">
+      <DependentUpon>BoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessCore\ChessCore.csproj">
+      <Project>{7E8B4236-39F2-4AE3-BEE3-0CAC0937FA58}</Project>
+      <Name>ChessCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoardForm.resx">
+      <DependentUpon>BoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_1_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_2_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_3_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_4_knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_5_rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_6_pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackField.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_1_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_2_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_3_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_4_knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_5_rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_6_pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteField.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
